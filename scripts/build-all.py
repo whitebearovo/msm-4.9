@@ -131,7 +131,7 @@ class BuildTracker:
         seq.set_width(self.longest)
         tok = self.build_tokens.get()
         with self.lock:
-            print "Building:", seq.short_name
+            print ("Building:"), seq.short_name
         with seq:
             seq.run()
             self.results.put(seq.status)
